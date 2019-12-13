@@ -1,0 +1,7 @@
+.hidden {
+  display: none;
+}
+
+button[name="reprint"] {
+  margin-left: 0.25em;
+}

@@ -1,0 +1,61 @@
+@media print {
+  @page {
+    size: 3.75in 1.5in landscape;
+    margin: 0;
+  }
+}
+
+html {
+  width: 3.75in;
+  height: 1.5in;
+}
+
+body,
+#label {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 20px;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#identifier {
+  font-size: 60px;
+  text-align: center;
+}
+
+#condition::after {
+  content: '-';
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+#title {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: nowrap;
+  hyphens: none;
+}

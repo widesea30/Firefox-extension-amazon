@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Browser extension for Amazon",
+  "version": "0.0.8",
+  "description": "No description",
+  "icons": {
+    "48": "images/icons/extension.png"
+  },
+
+  
+  "permissions": [
+    "*://*.amazon.com/*",
+    "*://*.blackforestbooks.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://g/abis/Display/itemSelected/*",
+        "*://sellercentral.amazon.com/abis/Display/ItemSelected/*",
+        "*://sellercentral.amazon.com/abis/Display/*",
+        "*://sellercentral.amazon.com/*",
+        "*://localhost/*"
+      ],
+      "js": [
+        "js/amazonInventory.js",
+        "js/mobx.umd.js",
+        "js/utils.js",
+        "js/print.js",
+        "js/sku.js",
+        "js/prices.js",
+        "js/offers.js",
+        "js/product.js",
+        "js/content.js"
+      ],
+      "css": [
+        "css/content.css"
+      ]
+    }
+  ]
+}
